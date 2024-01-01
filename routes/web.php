@@ -46,7 +46,7 @@ Route:: controller(MaestroController:: class) -> group(function () {
     $prefix = 'profesores';
     Route::get('/'.$prefix.'/', 'index')->name($prefix.'.index');
     Route::get('/'.$prefix.'/create', 'create')->name($prefix.'.create');
-    Route::post('/'.$prefix.'/create', 'save')->name($prefix.'.create');
+    Route::post('/'.$prefix.'/create', 'save');
     Route::get('/'.$prefix.'/edit/{maestro}', 'edit')->name($prefix.'.edit');
     Route::post('/'.$prefix.'/edit/{maestro}', 'update')->name($prefix.'.update');
 });
@@ -56,7 +56,7 @@ Route:: controller(TallerController:: class) -> group(function () {
     $prefix = 'talleres';
     Route::get('/'.$prefix.'/', 'index')->name($prefix.'.index');
     Route::get('/'.$prefix.'/create', 'create')->name($prefix.'.create');
-    Route::post('/'.$prefix.'/create', 'save')->name($prefix.'.create');
+    Route::post('/'.$prefix.'/create', 'save');
     Route::get('/'.$prefix.'/edit/{taller}', 'edit')->name($prefix.'.edit');
     Route::post('/'.$prefix.'/edit/{taller}', 'update')->name($prefix.'.update');
 });
